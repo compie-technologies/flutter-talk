@@ -22,7 +22,7 @@ Future<BaseNetworkResponse<MoviesResponse>> getMovies(int page) async {
   DateFormat dateFormat = DateFormat('y-M-d');
 
   Map<String, String> params = Map.fromEntries([
-    MapEntry("api_key", "1f2e9419c5a0c7c4cbe20f4e07fe4859"),
+    MapEntry("api_key", apiKey),
     MapEntry("primary_release_date.gte", dateFormat.format(DateTime.now().add(Duration(days: -9))),),
     MapEntry("primary_release_date.lte", dateFormat.format(DateTime.now().add(Duration(days: 9))),),
     MapEntry("page", page.toString(),),
@@ -61,7 +61,7 @@ Future<BaseNetworkResponse<GenresResponse>> getGenres() async {
 
 
   Map<String, String> params = Map.fromEntries([
-    MapEntry("api_key", "1f2e9419c5a0c7c4cbe20f4e07fe4859"),
+    MapEntry("api_key", apiKey),
   ]);
 
   try {

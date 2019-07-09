@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     ///showcase hot reload by changing this value and saving.
-    bool isGrid = false;
+    bool isGrid = true;
 
     return Scaffold(
       appBar: AppBar(
